@@ -1,0 +1,5 @@
+# Public product page (served from /product/). Indexable, stricter CSP (no eval), not frameable.
+<IfModule mod_headers.c>
+  Header always unset X-Robots-Tag
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src 'self' https://app.nexdrive.co.uk; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
+</IfModule>

@@ -1,0 +1,926 @@
+{
+  "meta": {
+    "description": "NexDrive demo data in API (v1) shape. Fictional people (including referred instructors); licence, theory and bank numbers are invented and not valid documents.",
+    "referenceNow": "2026-10-07T13:30:00+01:00",
+    "money": "integer pence (GBP)",
+    "time": "ISO 8601 with Europe/London offset"
+  },
+  "instructor": {
+    "id": "00000000-0000-4000-8000-0000000f4241",
+    "fullName": "Daniel Wilson",
+    "phone": "+447700900123",
+    "email": "daniel@wilsondriving.co.uk",
+    "address": "Flat 4, 112 Bath Road, Slough",
+    "postcode": "SL1 3XE",
+    "adiNumber": "482913",
+    "instructorStatus": "adi",
+    "businessName": "Wilson Driving School",
+    "coverageAreas": [
+      "SL1",
+      "SL2",
+      "SL3",
+      "SL4",
+      "SL6"
+    ],
+    "defaultDurationMinutes": 60,
+    "rateCards": [
+      {
+        "id": "00000000-0000-4000-8000-0000005b8d81",
+        "code": "std",
+        "label": "Standard",
+        "hourlyRatePence": 4000,
+        "isDefault": true
+      },
+      {
+        "id": "00000000-0000-4000-8000-0000005b8d82",
+        "code": "int",
+        "label": "Intensive course",
+        "hourlyRatePence": 3600,
+        "isDefault": false
+      },
+      {
+        "id": "00000000-0000-4000-8000-0000005b8d83",
+        "code": "pp",
+        "label": "Pass Plus",
+        "hourlyRatePence": 4500,
+        "isDefault": false
+      }
+    ],
+    "bankAccount": {
+      "accountHolder": "Daniel Wilson",
+      "sortCodeMasked": "••-••-77",
+      "accountNumberLast4": "5521",
+      "includeInMessages": true
+    }
+  },
+  "subscription": {
+    "planCode": "1m",
+    "status": "active",
+    "currentPeriodStart": "2026-09-26T00:00:00+01:00",
+    "currentPeriodEnd": "2026-10-26T00:00:00+00:00",
+    "applyCreditAutomatically": false,
+    "paymentMethod": {
+      "brand": "visa",
+      "last4": "4242"
+    }
+  },
+  "subscriptionPlans": [
+    {
+      "code": "1m",
+      "name": "Monthly",
+      "termMonths": 1,
+      "monthlyPricePence": 2500,
+      "termPricePence": 2500,
+      "sortOrder": 1
+    },
+    {
+      "code": "12m",
+      "name": "12 months",
+      "termMonths": 12,
+      "monthlyPricePence": 2000,
+      "termPricePence": 24000,
+      "sortOrder": 2
+    },
+    {
+      "code": "24m",
+      "name": "24 months",
+      "termMonths": 24,
+      "monthlyPricePence": 1750,
+      "termPricePence": 42000,
+      "sortOrder": 3
+    },
+    {
+      "code": "36m",
+      "name": "36 months",
+      "termMonths": 36,
+      "monthlyPricePence": 1500,
+      "termPricePence": 54000,
+      "sortOrder": 4
+    }
+  ],
+  "learners": [
+    {
+      "id": "00000000-0000-4000-8000-0000001e8481",
+      "fullName": "James Smith",
+      "phone": "+447700900456",
+      "email": "james.smith@gmail.com",
+      "address": "27 Stoke Poges Lane, Slough",
+      "postcode": "SL1 3NY",
+      "provisionalLicenceNumber": "SMITH801157J99AB",
+      "theoryCertificateNumber": "30418722",
+      "notes": "Practical test booked for Tue 3 Nov. Working on roundabouts and bay parking.",
+      "status": "active",
+      "archivedAt": null,
+      "createdAt": "2026-07-14T09:00:00+01:00"
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000001e8482",
+      "fullName": "Priya Patel",
+      "phone": "+447700900218",
+      "email": null,
+      "address": "8 Langley Road, Slough",
+      "postcode": "SL3 7AB",
+      "provisionalLicenceNumber": "PATEL856204PR1CD",
+      "theoryCertificateNumber": "51102938",
+      "notes": null,
+      "status": "active",
+      "archivedAt": null,
+      "createdAt": "2026-08-02T09:00:00+01:00"
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000001e8483",
+      "fullName": "Oliver Hughes",
+      "phone": "+447700900731",
+      "email": "oliver.h@outlook.com",
+      "address": "51 Farnham Road, Slough",
+      "postcode": "SL1 4UT",
+      "provisionalLicenceNumber": "HUGHE703128OJ9KL",
+      "theoryCertificateNumber": null,
+      "notes": "Theory test booked for 19 Oct.",
+      "status": "active",
+      "archivedAt": null,
+      "createdAt": "2026-09-01T09:00:00+01:00"
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000001e8484",
+      "fullName": "Amelia Clarke",
+      "phone": "+447700900864",
+      "email": null,
+      "address": "22 High Street, Eton",
+      "postcode": "SL4 6AX",
+      "provisionalLicenceNumber": null,
+      "theoryCertificateNumber": null,
+      "notes": null,
+      "status": "active",
+      "archivedAt": null,
+      "createdAt": "2026-10-05T09:00:00+01:00"
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000001e8485",
+      "fullName": "Mohammed Ali",
+      "phone": "+447700900392",
+      "email": null,
+      "address": "9 Elliman Avenue, Slough",
+      "postcode": "SL2 5BA",
+      "provisionalLicenceNumber": "ALI99804215M99QZ",
+      "theoryCertificateNumber": "40937716",
+      "notes": null,
+      "status": "active",
+      "archivedAt": null,
+      "createdAt": "2026-06-20T09:00:00+01:00"
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000001e8486",
+      "fullName": "Sophie Turner",
+      "phone": "+447700900145",
+      "email": "sophie.turner@icloud.com",
+      "address": "41 Upton Court Road, Slough",
+      "postcode": "SL3 7LU",
+      "provisionalLicenceNumber": "TURNE861309SE2TR",
+      "theoryCertificateNumber": "62210487",
+      "notes": null,
+      "status": "active",
+      "archivedAt": null,
+      "createdAt": "2026-08-18T09:00:00+01:00"
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000001e8487",
+      "fullName": "Ethan Wright",
+      "phone": "+447700900677",
+      "email": null,
+      "address": "15 Albert Street, Windsor",
+      "postcode": "SL4 5BU",
+      "provisionalLicenceNumber": "WRIGH704223EW9AB",
+      "theoryCertificateNumber": "38820154",
+      "notes": "Passed practical test on 3 Oct.",
+      "status": "archived",
+      "archivedAt": "2026-10-04T12:00:00+01:00",
+      "createdAt": "2026-04-11T09:00:00+01:00"
+    }
+  ],
+  "packages": [
+    {
+      "id": "00000000-0000-4000-8000-0000003d0901",
+      "learnerId": "00000000-0000-4000-8000-0000001e8481",
+      "lessonCount": 2,
+      "subtotalPence": 16000,
+      "discountPence": 2000,
+      "totalPence": 14000
+    }
+  ],
+  "bookings": [
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6d9",
+      "learnerId": "00000000-0000-4000-8000-0000001e8487",
+      "packageId": null,
+      "startsAt": "2026-09-21T09:00:00+01:00",
+      "durationMinutes": 120,
+      "status": "completed",
+      "displayStatus": "completed",
+      "location": {
+        "type": "learner_home",
+        "address": "15 Albert Street, Windsor",
+        "postcode": "SL4 5BU"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 0,
+      "totalPence": 8000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6d8",
+      "learnerId": "00000000-0000-4000-8000-0000001e8481",
+      "packageId": null,
+      "startsAt": "2026-09-23T10:00:00+01:00",
+      "durationMinutes": 120,
+      "status": "completed",
+      "displayStatus": "completed",
+      "location": {
+        "type": "learner_home",
+        "address": "27 Stoke Poges Lane, Slough",
+        "postcode": "SL1 3NY"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 0,
+      "totalPence": 8000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6d5",
+      "learnerId": "00000000-0000-4000-8000-0000001e8487",
+      "packageId": null,
+      "startsAt": "2026-09-28T16:00:00+01:00",
+      "durationMinutes": 60,
+      "status": "cancelled",
+      "displayStatus": "cancelled",
+      "location": {
+        "type": "learner_home",
+        "address": "15 Albert Street, Windsor",
+        "postcode": "SL4 5BU"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 4000,
+      "discountPence": 0,
+      "totalPence": 4000,
+      "rescheduledFrom": null,
+      "cancelReason": "Learner unwell"
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6c1",
+      "learnerId": "00000000-0000-4000-8000-0000001e8481",
+      "packageId": null,
+      "startsAt": "2026-09-30T10:00:00+01:00",
+      "durationMinutes": 120,
+      "status": "completed",
+      "displayStatus": "completed",
+      "location": {
+        "type": "learner_home",
+        "address": "27 Stoke Poges Lane, Slough",
+        "postcode": "SL1 3NY"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 0,
+      "totalPence": 8000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6c2",
+      "learnerId": "00000000-0000-4000-8000-0000001e8482",
+      "packageId": null,
+      "startsAt": "2026-10-02T15:00:00+01:00",
+      "durationMinutes": 60,
+      "status": "completed",
+      "displayStatus": "completed",
+      "location": {
+        "type": "learner_home",
+        "address": "8 Langley Road, Slough",
+        "postcode": "SL3 7AB"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 4000,
+      "discountPence": 0,
+      "totalPence": 4000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6c3",
+      "learnerId": "00000000-0000-4000-8000-0000001e8487",
+      "packageId": null,
+      "startsAt": "2026-10-03T09:00:00+01:00",
+      "durationMinutes": 120,
+      "status": "completed",
+      "displayStatus": "completed",
+      "location": {
+        "type": "test_centre",
+        "address": "Slough (Langley) Driving Test Centre",
+        "postcode": "SL3 8DS"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 0,
+      "totalPence": 8000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6c4",
+      "learnerId": "00000000-0000-4000-8000-0000001e8481",
+      "packageId": null,
+      "startsAt": "2026-10-05T10:00:00+01:00",
+      "durationMinutes": 120,
+      "status": "completed",
+      "displayStatus": "completed",
+      "location": {
+        "type": "learner_home",
+        "address": "27 Stoke Poges Lane, Slough",
+        "postcode": "SL1 3NY"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 0,
+      "totalPence": 8000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6c5",
+      "learnerId": "00000000-0000-4000-8000-0000001e8486",
+      "packageId": null,
+      "startsAt": "2026-10-05T16:00:00+01:00",
+      "durationMinutes": 60,
+      "status": "cancelled",
+      "displayStatus": "cancelled",
+      "location": {
+        "type": "learner_home",
+        "address": "41 Upton Court Road, Slough",
+        "postcode": "SL3 7LU"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 4000,
+      "discountPence": 0,
+      "totalPence": 4000,
+      "rescheduledFrom": null,
+      "cancelReason": "Learner request"
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6c6",
+      "learnerId": "00000000-0000-4000-8000-0000001e8483",
+      "packageId": null,
+      "startsAt": "2026-10-06T11:00:00+01:00",
+      "durationMinutes": 90,
+      "status": "completed",
+      "displayStatus": "completed",
+      "location": {
+        "type": "learner_home",
+        "address": "51 Farnham Road, Slough",
+        "postcode": "SL1 4UT"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 6000,
+      "discountPence": 0,
+      "totalPence": 6000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6c7",
+      "learnerId": "00000000-0000-4000-8000-0000001e8485",
+      "packageId": null,
+      "startsAt": "2026-10-06T14:00:00+01:00",
+      "durationMinutes": 60,
+      "status": "completed",
+      "displayStatus": "completed",
+      "location": {
+        "type": "learner_home",
+        "address": "9 Elliman Avenue, Slough",
+        "postcode": "SL2 5BA"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 4000,
+      "discountPence": 0,
+      "totalPence": 4000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6c8",
+      "learnerId": "00000000-0000-4000-8000-0000001e8485",
+      "packageId": null,
+      "startsAt": "2026-10-07T09:00:00+01:00",
+      "durationMinutes": 60,
+      "status": "completed",
+      "displayStatus": "completed",
+      "location": {
+        "type": "learner_home",
+        "address": "9 Elliman Avenue, Slough",
+        "postcode": "SL2 5BA"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 4000,
+      "discountPence": 0,
+      "totalPence": 4000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6c9",
+      "learnerId": "00000000-0000-4000-8000-0000001e8482",
+      "packageId": null,
+      "startsAt": "2026-10-07T12:15:00+01:00",
+      "durationMinutes": 90,
+      "status": "scheduled",
+      "displayStatus": "ongoing",
+      "location": {
+        "type": "learner_home",
+        "address": "8 Langley Road, Slough",
+        "postcode": "SL3 7AB"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 6000,
+      "discountPence": 0,
+      "totalPence": 6000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6ca",
+      "learnerId": "00000000-0000-4000-8000-0000001e8481",
+      "packageId": null,
+      "startsAt": "2026-10-07T14:00:00+01:00",
+      "durationMinutes": 120,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "learner_home",
+        "address": "27 Stoke Poges Lane, Slough",
+        "postcode": "SL1 3NY"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 0,
+      "totalPence": 8000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6cb",
+      "learnerId": "00000000-0000-4000-8000-0000001e8483",
+      "packageId": null,
+      "startsAt": "2026-10-07T16:30:00+01:00",
+      "durationMinutes": 60,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "learner_home",
+        "address": "51 Farnham Road, Slough",
+        "postcode": "SL1 4UT"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 4000,
+      "discountPence": 0,
+      "totalPence": 4000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6cc",
+      "learnerId": "00000000-0000-4000-8000-0000001e8486",
+      "packageId": null,
+      "startsAt": "2026-10-08T10:00:00+01:00",
+      "durationMinutes": 120,
+      "status": "scheduled",
+      "displayStatus": "rescheduled",
+      "location": {
+        "type": "learner_home",
+        "address": "41 Upton Court Road, Slough",
+        "postcode": "SL3 7LU"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 0,
+      "totalPence": 8000,
+      "rescheduledFrom": "2026-10-07T10:00:00+01:00",
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6cd",
+      "learnerId": "00000000-0000-4000-8000-0000001e8485",
+      "packageId": null,
+      "startsAt": "2026-10-08T15:00:00+01:00",
+      "durationMinutes": 60,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "learner_home",
+        "address": "9 Elliman Avenue, Slough",
+        "postcode": "SL2 5BA"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 4000,
+      "discountPence": 0,
+      "totalPence": 4000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6ce",
+      "learnerId": "00000000-0000-4000-8000-0000001e8481",
+      "packageId": "00000000-0000-4000-8000-0000003d0901",
+      "startsAt": "2026-10-09T09:30:00+01:00",
+      "durationMinutes": 120,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "learner_home",
+        "address": "27 Stoke Poges Lane, Slough",
+        "postcode": "SL1 3NY"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 1000,
+      "totalPence": 7000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6cf",
+      "learnerId": "00000000-0000-4000-8000-0000001e8482",
+      "packageId": null,
+      "startsAt": "2026-10-09T13:00:00+01:00",
+      "durationMinutes": 60,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "learner_home",
+        "address": "8 Langley Road, Slough",
+        "postcode": "SL3 7AB"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 4000,
+      "discountPence": 0,
+      "totalPence": 4000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6d0",
+      "learnerId": "00000000-0000-4000-8000-0000001e8483",
+      "packageId": null,
+      "startsAt": "2026-10-10T10:00:00+01:00",
+      "durationMinutes": 120,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "test_centre",
+        "address": "Slough (Langley) Driving Test Centre",
+        "postcode": "SL3 8DS"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 0,
+      "totalPence": 8000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6d1",
+      "learnerId": "00000000-0000-4000-8000-0000001e8481",
+      "packageId": null,
+      "startsAt": "2026-10-12T14:00:00+01:00",
+      "durationMinutes": 120,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "learner_home",
+        "address": "27 Stoke Poges Lane, Slough",
+        "postcode": "SL1 3NY"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 0,
+      "totalPence": 8000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6d2",
+      "learnerId": "00000000-0000-4000-8000-0000001e8486",
+      "packageId": null,
+      "startsAt": "2026-10-14T11:00:00+01:00",
+      "durationMinutes": 60,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "learner_home",
+        "address": "41 Upton Court Road, Slough",
+        "postcode": "SL3 7LU"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 4000,
+      "discountPence": 0,
+      "totalPence": 4000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6d3",
+      "learnerId": "00000000-0000-4000-8000-0000001e8481",
+      "packageId": "00000000-0000-4000-8000-0000003d0901",
+      "startsAt": "2026-10-16T09:30:00+01:00",
+      "durationMinutes": 120,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "learner_home",
+        "address": "27 Stoke Poges Lane, Slough",
+        "postcode": "SL1 3NY"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 1000,
+      "totalPence": 7000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6d4",
+      "learnerId": "00000000-0000-4000-8000-0000001e8485",
+      "packageId": null,
+      "startsAt": "2026-10-20T10:00:00+01:00",
+      "durationMinutes": 60,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "learner_home",
+        "address": "9 Elliman Avenue, Slough",
+        "postcode": "SL2 5BA"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 4000,
+      "discountPence": 0,
+      "totalPence": 4000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6d6",
+      "learnerId": "00000000-0000-4000-8000-0000001e8482",
+      "packageId": null,
+      "startsAt": "2026-10-22T15:00:00+01:00",
+      "durationMinutes": 90,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "learner_home",
+        "address": "8 Langley Road, Slough",
+        "postcode": "SL3 7AB"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 6000,
+      "discountPence": 0,
+      "totalPence": 6000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000002dc6d7",
+      "learnerId": "00000000-0000-4000-8000-0000001e8483",
+      "packageId": null,
+      "startsAt": "2026-10-27T11:00:00+00:00",
+      "durationMinutes": 120,
+      "status": "scheduled",
+      "displayStatus": "upcoming",
+      "location": {
+        "type": "learner_home",
+        "address": "51 Farnham Road, Slough",
+        "postcode": "SL1 4UT"
+      },
+      "hourlyRatePence": 4000,
+      "pricePence": 8000,
+      "discountPence": 0,
+      "totalPence": 8000,
+      "rescheduledFrom": null,
+      "cancelReason": null
+    }
+  ],
+  "notifications": [
+    {
+      "id": "00000000-0000-4000-8000-0000004c4b41",
+      "category": "lessons",
+      "type": "clock",
+      "title": "Your next lesson starts in 30 minutes",
+      "body": "James Smith · 14:00 · 2 hours · SL1 3NY",
+      "read": false
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000004c4b42",
+      "category": "billing",
+      "type": "warn",
+      "title": "Your free trial ends in 3 days",
+      "body": "Your 12-month plan starts on Sat 10 Oct at £16.99/month.",
+      "read": false
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000004c4b43",
+      "category": "learners",
+      "type": "user",
+      "title": "Amelia Clarke’s details are incomplete",
+      "body": "Add her provisional licence number before booking a lesson.",
+      "read": false
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000004c4b44",
+      "category": "lessons",
+      "type": "repeat",
+      "title": "Booking changed",
+      "body": "Sophie Turner moved from Wed 7 Oct 10:00 to Thu 8 Oct 10:00.",
+      "read": true
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000004c4b45",
+      "category": "lessons",
+      "type": "calendarPlus",
+      "title": "Booking created",
+      "body": "2 lessons for James Smith · £140 after £20 discount.",
+      "read": true
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000004c4b46",
+      "category": "lessons",
+      "type": "calendarX",
+      "title": "Booking cancelled",
+      "body": "Sophie Turner · Mon 5 Oct, 16:00 · Learner request",
+      "read": true
+    },
+    {
+      "id": "00000000-0000-4000-8000-0000004c4b47",
+      "category": "billing",
+      "type": "card",
+      "title": "Payment method saved",
+      "body": "Visa ending 4242 will be charged when your trial ends.",
+      "read": true
+    }
+  ],
+  "referralProgramme": {
+    "rewardPercent": 20,
+    "newInstructorBenefit": {
+      "trialDays": 14,
+      "extraFreeMonths": 1
+    },
+    "code": {
+      "code": "NEXDANIEL25",
+      "url": "https://app.nexdrive.co.uk/join?ref=NEXDANIEL25",
+      "status": "active"
+    },
+    "summary": {
+      "totalReferrals": 7,
+      "successful": 4,
+      "pending": 2,
+      "notQualified": 1,
+      "totalEarnedPence": 18500,
+      "creditUsedPence": 2500,
+      "balancePence": 16000,
+      "pendingRewardPence": 4800
+    },
+    "referrals": [
+      {
+        "id": "00000000-0000-4000-8000-0000007a1201",
+        "name": "Sarah Smith",
+        "registeredAt": "2026-07-02T10:00:00+01:00",
+        "planCode": "12m",
+        "qualifyingValuePence": 24000,
+        "rewardPence": 4800,
+        "status": "awarded",
+        "rewardStatus": "awarded",
+        "awardedAt": "2026-08-30T09:00:00+01:00",
+        "reason": null
+      },
+      {
+        "id": "00000000-0000-4000-8000-0000007a1202",
+        "name": "John Brown",
+        "registeredAt": "2026-07-20T10:00:00+01:00",
+        "planCode": "24m",
+        "qualifyingValuePence": 42000,
+        "rewardPence": 8400,
+        "status": "awarded",
+        "rewardStatus": "awarded",
+        "awardedAt": "2026-09-17T09:00:00+01:00",
+        "reason": null
+      },
+      {
+        "id": "00000000-0000-4000-8000-0000007a1203",
+        "name": "Aisha Khan",
+        "registeredAt": "2026-07-27T10:00:00+01:00",
+        "planCode": "1m",
+        "qualifyingValuePence": 2500,
+        "rewardPence": 500,
+        "status": "awarded",
+        "rewardStatus": "awarded",
+        "awardedAt": "2026-09-24T09:00:00+01:00",
+        "reason": null
+      },
+      {
+        "id": "00000000-0000-4000-8000-0000007a1204",
+        "name": "Hannah Lee",
+        "registeredAt": "2026-08-02T10:00:00+01:00",
+        "planCode": "12m",
+        "qualifyingValuePence": 24000,
+        "rewardPence": 4800,
+        "status": "awarded",
+        "rewardStatus": "awarded",
+        "awardedAt": "2026-09-30T09:00:00+01:00",
+        "reason": null
+      },
+      {
+        "id": "00000000-0000-4000-8000-0000007a1205",
+        "name": "Oliver Grant",
+        "registeredAt": "2026-08-20T10:00:00+01:00",
+        "planCode": "12m",
+        "qualifyingValuePence": 24000,
+        "rewardPence": 0,
+        "status": "not_qualified",
+        "rewardStatus": "forfeited",
+        "awardedAt": null,
+        "reason": "Cancelled during free trial"
+      },
+      {
+        "id": "00000000-0000-4000-8000-0000007a1206",
+        "name": "Emma Wright",
+        "registeredAt": "2026-09-28T10:00:00+01:00",
+        "planCode": "12m",
+        "qualifyingValuePence": 24000,
+        "rewardPence": 4800,
+        "status": "trialing",
+        "rewardStatus": "pending",
+        "awardedAt": null,
+        "reason": null
+      },
+      {
+        "id": "00000000-0000-4000-8000-0000007a1207",
+        "name": "Liam Carter",
+        "registeredAt": "2026-10-05T10:00:00+01:00",
+        "planCode": null,
+        "qualifyingValuePence": null,
+        "rewardPence": null,
+        "status": "registered",
+        "rewardStatus": "none",
+        "awardedAt": null,
+        "reason": null
+      }
+    ],
+    "creditTransactions": [
+      {
+        "id": "00000000-0000-4000-8000-000000895445",
+        "date": "2026-09-30",
+        "type": "referral_reward",
+        "amountPence": 4800,
+        "description": "Referral reward — Hannah Lee",
+        "referralId": "00000000-0000-4000-8000-0000007a1204",
+        "balanceAfterPence": 16000
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000895444",
+        "date": "2026-09-26",
+        "type": "redemption",
+        "amountPence": -2500,
+        "description": "Applied to Monthly subscription payment",
+        "referralId": null,
+        "balanceAfterPence": 11200
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000895443",
+        "date": "2026-09-24",
+        "type": "referral_reward",
+        "amountPence": 500,
+        "description": "Referral reward — Aisha Khan",
+        "referralId": "00000000-0000-4000-8000-0000007a1203",
+        "balanceAfterPence": 13700
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000895442",
+        "date": "2026-09-17",
+        "type": "referral_reward",
+        "amountPence": 8400,
+        "description": "Referral reward — John Brown",
+        "referralId": "00000000-0000-4000-8000-0000007a1202",
+        "balanceAfterPence": 13200
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000895441",
+        "date": "2026-08-30",
+        "type": "referral_reward",
+        "amountPence": 4800,
+        "description": "Referral reward — Sarah Smith",
+        "referralId": "00000000-0000-4000-8000-0000007a1201",
+        "balanceAfterPence": 4800
+      }
+    ]
+  }
+}
