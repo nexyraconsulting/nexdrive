@@ -8,9 +8,10 @@ This folder is packaged as a **Node.js / Express app** for **GoDaddy Node.js Hos
 
 ```bash
 npm install
-npm start       # runs the build, then serves at http://localhost:3000
+npm start       # runs the build, then serves at http://nexdrive.localhost:3300
 ```
 
+- NexDrive serves on its **own local address, `http://nexdrive.localhost:3300`**, so it doesn't clash with another app on `localhost:3000`. Modern browsers resolve any `*.localhost` name to the loopback address automatically — no hosts-file edit needed. Override the port/host with the `PORT` and `HOST` environment variables (e.g. `PORT=4000 npm start`).
 - The web app now lives in **`public/`** (served at the site root); the server is **`server.js`** (binds `process.env.PORT`), and `npm run build` regenerates the service-worker precache list (`public/sw-precache.js`).
 - **Deploy:** connect this repo in GoDaddy Node.js Hosting (Git sync) — the platform runs install → `npm run build` → `npm run start`. No environment variables or database are needed in demo mode.
 - **Install as a mobile app:** open the site on a phone and choose **Install / Add to Home Screen**. It launches full-screen and keeps working offline via the service worker (`public/sw.js`) and `public/manifest.webmanifest`.
@@ -100,9 +101,10 @@ nexdrive_production/
 ## Installation and local development
 
 ```bash
-# 1. Front end (no build)
-npx serve .                      # or: python3 -m http.server 3000
-# open http://localhost:3000/ (app) and http://localhost:3000/product/ (product page)
+# 1. App (Node.js / Express — recommended)
+npm install && npm start         # serves at http://nexdrive.localhost:3300
+# open http://nexdrive.localhost:3300/ (app)
+#    static alternative: npx serve public -l 3300
 
 # 2. Database (for backend work)
 cp .env.example .env             # set POSTGRES_PASSWORD and the other local values

@@ -13,8 +13,15 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3300;
 const HOST = process.env.HOST || '0.0.0.0';
+// Local dev link shown in the console. NexDrive gets its own hostname so it
+// never clashes with another app already on http://localhost:3000. Modern
+// browsers resolve any *.localhost name to the loopback address with no
+// hosts-file change, so http://nexdrive.localhost:<PORT> just works. Set the
+// HOST env var to override (e.g. a real hostname in production).
+const DISPLAY_HOST =
+  HOST === '0.0.0.0' || HOST === '127.0.0.1' ? 'nexdrive.localhost' : HOST;
 const PUBLIC = path.join(__dirname, 'public');
 
 if (!fs.existsSync(path.join(PUBLIC, 'index.html'))) {
@@ -59,9 +66,8 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, HOST, () => {
-  const shown = HOST === '0.0.0.0' ? 'localhost' : HOST;
-  console.log(`NexDrive running at http://${shown}:${PORT}`);
-  console.log(`  app       http://${shown}:${PORT}/`);
-  console.log(`  manifest  http://${shown}:${PORT}/manifest.webmanifest`);
-  console.log(`  sw        http://${shown}:${PORT}/sw.js`);
+  console.log(`NexDrive running at http://${DISPLAY_HOST}:${PORT}`);
+  console.log(`  app       http://${DISPLAY_HOST}:${PORT}/`);
+  console.log(`  manifest  http://${DISPLAY_HOST}:${PORT}/manifest.webmanifest`);
+  console.log(`  sw        http://${DISPLAY_HOST}:${PORT}/sw.js`);
 });

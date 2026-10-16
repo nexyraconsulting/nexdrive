@@ -186,7 +186,7 @@ export $(grep -v '^#' .env | xargs)
 psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f database/schema.sql
 psql "$DATABASE_URL" -f database/seed.sql
 psql "$DATABASE_URL" -v enc_key="$FIELD_ENCRYPTION_KEY" -f database/demo_data.sql
-npx serve .                                # front end on :3000
+npm start                                  # app on http://nexdrive.localhost:3300
 ```
 
 Suggested API repository layout (separate repo, `nexdrive-api`):
